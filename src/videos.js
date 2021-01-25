@@ -17,8 +17,8 @@ async function readVideos() {
 }
 
 async function listVideos(req, res) {
-  const title = 'Fræðslumyndbandaleigan';
   const json = await readVideos();
+  const title = 'Fræðslumyndbandaleigan';
   const { videos } = json;
   const { categories } = json;
 
@@ -29,9 +29,7 @@ async function video(req, res, next) {
   const json = await readVideos();
   const { videos } = json;
   const { id } = req.params;
-
-  // const foundVideo = videos.find((a) => a.id === id);
-  const foundVideo = videos.find((a) => a.id === 1);
+  const foundVideo = videos.find((a) => a.id === Number(id));
 
   if (!foundVideo) {
     return next();
@@ -39,7 +37,7 @@ async function video(req, res, next) {
 
   const { title } = foundVideo;
 
-  return res.render('video', { title, video: foundVideo });
+  return res.render('video', { title, videos, video: foundVideo });
 }
 
 router.get('/', catchErrors(listVideos));

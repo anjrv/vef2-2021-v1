@@ -3,12 +3,10 @@
 ### Unnin af: Jaan Jaerving // JAJ20
 
 Keyrt með:
-```
-npm install
-npm run test    // Keyrir eslint og stylelint
-npm run dev     // Keyrir nodemon ásamt Sass virkni
-npm run start   // Keyrir upp vefþjón á localhost porti 3000
-```
+`npm install`
+`npm test` Keyrir eslint og stylelint
+`npm start` Keyrir upp vefþjón á localhost porti 3000
+`npm run dev` Keyrir nodemon ásamt Sass virkni
 
 [Kynning í fyrirlestri](https://youtu.be/pCEHnurbuCU).
 

@@ -2,7 +2,7 @@
   "name": "vef2-2021-v1",
   "version": "1.0.0",
   "description": "Verkefni1",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1"
@@ -19,13 +19,14 @@
     "stylelint-config-standard": "^20.0.0"
   },
   "scripts": {
-    "eslint": "eslint *.js ./src/**/*.js",
-    "stylelint": "stylelint ./src/styles/**/*.scss --syntax scss",
+    "eslint": "eslint *.js ./src/*.js ./src/**/*.js",
+    "stylelint": "stylelint ./src/styles/*.scss --syntax scss",
     "test": "concurrently npm:eslint npm:stylelint",
-    "sass": "node-sass --source-map-embed ./src/styles/styles.scss ./dist/styles.css",
-    "sass-watch": "node-sass --source-map-embed --watch --recursive src/styles/styles.scss ./dist/styles.css",
+    "sass": "node-sass --source-map-embed ./src/styles/styles.scss ./public/videos/styles.css",
+    "sass-watch": "node-sass --source-map-embed --watch --recursive src/styles/styles.scss ./public/videos/styles.css",
     "start": "node app.js",
-    "dev": "concurrently npm:sass npm:sass-watch nodemon app.js"
+    "demon": "nodemon app.js",
+    "dev": "concurrently npm:sass npm:sass-watch npm:demon"
   },
   "repository": {
     "type": "git",

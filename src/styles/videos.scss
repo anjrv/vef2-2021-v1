@@ -1,0 +1,39 @@
+@import 'config';
+
+.videos {
+  @media (max-width: $max-width - 1) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &__row {
+    @include row;
+
+    flex-wrap: wrap;
+  }
+
+  &__row::after {
+    border-bottom: 1px solid #000;
+    content: '';
+    display: block;
+    margin: 0 auto;
+    padding-top: $gutter * 2;
+    width: 80%;
+  }
+
+  &__col {
+    @include columns(12);
+
+    margin-bottom: $gutter;
+
+    @media (min-width: 800px) {
+      @include columns(4);
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: $gutter;
+    margin-top: $gutter * 2;
+  }
+}

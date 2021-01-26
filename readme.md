@@ -1,5 +1,15 @@
 # Vef2 2021, verkefni 1
 
+### Unnin af: Jaan Jaerving // JAJ20
+
+Keyrt með:
+```
+npm install
+npm run test    // Keyrir eslint og stylelint
+npm run dev     // Keyrir nodemon ásamt Sass virkni
+npm run start   // Keyrir upp vefþjón á localhost porti 3000
+```
+
 [Kynning í fyrirlestri](https://youtu.be/pCEHnurbuCU).
 
 Verkefnið er byggt á [hópverkefni 2 í vefforritun 1, árið 2020](https://github.com/vefforritun/vef1-2020-h2).

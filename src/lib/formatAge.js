@@ -1,3 +1,9 @@
+/**
+ * Hjálparfall sem skilar aldur myndbandsins á lesanlegu formi
+ *
+ * @param {number} created Millisekúndur fyrir dagsetningu
+ * @returns {string} Strengur til að lýsa hvenær myndbönd var búinn til
+ */
 function formatAge(created) {
   const date = new Date();
   const ms = date.getTime() - created;
